@@ -1,16 +1,38 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-
-<link rel="stylesheet" href="app.css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Site</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
-
-<h1>Isaiah Rodriguez</h1>
-<button onclick="alertButton()">Click Me</button>
-
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/" id="navbar-logo">Isaiah Rodriguez</a>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="/" class="navbar-links">About Me</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="/" class="navbar-links">Experience</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="/" class="navbar-links">Education</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="/" class="navbar-links">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </body>
 
 <script src="app.js"></script>
