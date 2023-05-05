@@ -6,7 +6,7 @@
 }
 
 .navbar {
-    background-color: #a6cfff;
+    background-color: #3b3b3b;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -29,8 +29,7 @@
 }
 
 #navbar-logo {
-    background-color: #e6f2ff;
-    background-image: linear-gradient(to top, #000055 0%, #0000ad 100%);
+    background-color: #9dd49b;
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -43,8 +42,12 @@
     font-size: 2rem;
 }
 
-.temp {
-    margin-right: 0.5rem;
+#navbar-logo:hover {
+    /* underline animation here */
+}
+
+.navbar-toggle {
+    cursor: pointer;
 }
 
 .navbar-menu {
@@ -87,18 +90,104 @@
     border: none;
     outline: none;
     border-radius: 4px;
-    background-color: #ffd900;
-    color: #000000;
+    background-color: #da8e8e;
+    color: #fff;
     transition: all 0.3s ease;
 }
 
 .button:hover {
-    background-color: #fff;
-    color: #000055;
+    background-color: #9dd49b;
+    color: #fff;
     transition: all 0.3s ease;
 }
 
 .navbar-links:hover {
-    color: #0000ad;
+    color: #9dd49b;
     transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar-container {
+        padding: 0
+    }
+
+    #navbar-logo {
+        padding-left: 25px;
+    }
+
+    .navbar-toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar-menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+    }
+
+    .navbar-menu.is-active {
+        background: #3b3b3b;
+        top: 100%;
+        opacity: 1;
+        z-index: 99;
+        font-size: 1.6rem;
+        transition: all 0.5s ease, font-size 1ms;
+    }
+
+    .navbar-item {
+        width: 100%;
+    }
+
+    .navbar-links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    .navbar-button {
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
 }
